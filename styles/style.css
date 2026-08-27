@@ -1,0 +1,96 @@
+/*--FUENTES--*/
+
+@font-face {
+  font-family: "Archivo Black";
+  src:
+    url("../fonts/ArchivoBlack-Regular.woff2") format("woff2"),
+    url("../fonts/ArchivoBlack-Regular.woff") format("woff");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Noto Serif";
+  src:
+    url("../fonts/NotoSerif-Regular.woff2") format("woff2"),
+    url("../fonts/N2otoSerif-Regular.woff") format("woff");
+  font-weight: 800;
+}
+
+/*--HEADER--*/
+.header {
+}
+.main-name {
+}
+.titles {
+}
+.description {
+}
+.main-photo {
+}
+
+/*-menu-*/
+.menu {
+}
+.nav {
+}
+.nav-links {
+}
+.links {
+}
+.link {
+}
+
+/*--SKILS--*/
+.skils {
+}
+.skils-title {
+}
+.skils-icons {
+}
+.skil-icon {
+}
+
+/*--PROJECTS--*/
+.projects {
+}
+/*-section 1-*/
+.project-title {
+}
+.project-cards {
+}
+.project-card {
+}
+.project-preview {
+}
+.skil-used {
+}
+/*-section 2-*/
+.project-content {
+}
+.project-name {
+}
+.project-description {
+}
+.project-links {
+}
+.project-link {
+}
+.project-link-live {
+}
+.project-link-gith {
+}
+
+/*--FOOTER--*/
+.footer {
+}
+.contact {
+}
+.contact-title {
+}
+.email {
+}
+.socialmedia {
+}
+.socialmedia-links {
+}
+.socialmedia-link {
+}

@@ -6,25 +6,133 @@
     url("../fonts/ArchivoBlack-Regular.woff2") format("woff2"),
     url("../fonts/ArchivoBlack-Regular.woff") format("woff");
   font-weight: 800;
+  font-style: normal;
 }
 @font-face {
   font-family: "Noto Serif";
   src:
     url("../fonts/NotoSerif-Regular.woff2") format("woff2"),
-    url("../fonts/N2otoSerif-Regular.woff") format("woff");
+    url("../fonts/NotoSerif-Regular.woff") format("woff");
   font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src:
+    url("../fonts/Inter-Regular.woff2") format("woff2"),
+    url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Serif";
+  src:
+    url("../fonts/NotoSerif-Italic.woff2") format("woff2"),
+    url("../fonts/NotoSerif-Italic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Inter";
+  src:
+    url("../fonts/Inter-Italic.woff2") format("woff2"),
+    url("../fonts/Inter-Italic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("../fonts/OpenSans-Italic.woff2") format("woff2"),
+    url("../fonts/OpenSans-Italic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* ---MAIN--- */
+.main {
+  background-color: #111;
+  padding: 40px 120px;
+  color: #fff;
 }
 
 /*--HEADER--*/
 .header {
+  display: flex;
+  column-gap: 20px;
+}
+
+.header-description {
+  display: flex;
+  flex-direction: column;
 }
 .main-name {
+  /* Mariana Hernández */
+  max-width: 400px;
+  max-height: 156px;
+  margin-bottom: 15px;
+
+  font-family: "Archivo Black";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 78px;
+
+  color: #ffffff;
 }
 .titles {
+  /* Desarrolladora Full-Stack Junior | TypeScript, React, Node.js */
+
+  max-width: 790px;
+  max-height: 25px;
+  margin-bottom: 30px;
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  /* idéntico a la altura del cuadro */
+
+  color: rgba(255, 255, 255, 0.5);
 }
 .description {
+  /* Desarrolladora web junior con experiencia práctica creando interfaces limpias y responsivas con HTML, CSS, JavaScript y React, así como implementando lógica básica de back-end. Ha trabajado en proyectos formativos que siguen procesos reales de desarrollo, usando Git, GitHub y Figma. Disfruta colaborar en equipo, mantener un código claro y resolver problemas de forma estructurada. Motivada por seguir aprendiendo, asumir nuevos retos y aprovechar oportunidades para crecer como desarrolladora. */
+
+  width: 793px;
+  height: 150px;
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+
+  color: #ffffff;
+}
+.main-photo-frame {
+  margin-right: auto;
+  margin-left: 20px;
+  max-width: 387px;
+  max-height: 500px;
+  overflow: hidden;
 }
 .main-photo {
+  max-width: 587px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  z-index: 2;
 }
 
 /*-menu-*/

@@ -6,7 +6,6 @@
     url("../fonts/ArchivoBlack-Regular.woff2") format("woff2"),
     url("../fonts/ArchivoBlack-Regular.woff") format("woff");
   font-weight: 800;
-  font-style: normal;
 }
 @font-face {
   font-family: "Noto Serif";
@@ -14,7 +13,6 @@
     url("../fonts/NotoSerif-Regular.woff2") format("woff2"),
     url("../fonts/NotoSerif-Regular.woff") format("woff");
   font-weight: 800;
-  font-style: normal;
 }
 @font-face {
   font-family: "Inter";
@@ -22,7 +20,6 @@
     url("../fonts/Inter-Regular.woff2") format("woff2"),
     url("../fonts/Inter-Regular.woff") format("woff");
   font-weight: 800;
-  font-style: normal;
 }
 @font-face {
   font-family: "Open Sans";
@@ -30,31 +27,6 @@
     url("../fonts/OpenSans-Regular.woff2") format("woff2"),
     url("../fonts/OpenSans-Regular.woff") format("woff");
   font-weight: 800;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Noto Serif";
-  src:
-    url("../fonts/NotoSerif-Italic.woff2") format("woff2"),
-    url("../fonts/NotoSerif-Italic.woff") format("woff");
-  font-weight: 800;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Inter";
-  src:
-    url("../fonts/Inter-Italic.woff2") format("woff2"),
-    url("../fonts/Inter-Italic.woff") format("woff");
-  font-weight: 800;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Open Sans";
-  src:
-    url("../fonts/OpenSans-Italic.woff2") format("woff2"),
-    url("../fonts/OpenSans-Italic.woff") format("woff");
-  font-weight: 800;
-  font-style: italic;
 }
 
 /* ---MAIN--- */
@@ -108,7 +80,7 @@
 }
 .description {
   /* Desarrolladora web junior con experiencia práctica creando interfaces limpias y responsivas con HTML, CSS, JavaScript y React, así como implementando lógica básica de back-end. Ha trabajado en proyectos formativos que siguen procesos reales de desarrollo, usando Git, GitHub y Figma. Disfruta colaborar en equipo, mantener un código claro y resolver problemas de forma estructurada. Motivada por seguir aprendiendo, asumir nuevos retos y aprovechar oportunidades para crecer como desarrolladora. */
-
+  margin: 0;
   width: 793px;
   height: 150px;
 
@@ -141,14 +113,48 @@
 
 /*-menu-*/
 .menu {
+  margin-top: 15px;
+  padding-top: 15px;
+  margin-left: 0;
+  display: flex;
+  align-content: first baseline;
 }
 .nav {
+  margin: 0;
+  display: flex;
 }
 .nav-links {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  column-gap: 30px;
 }
 .links {
+  margin: 0;
+  position: relative;
+  list-style: none;
 }
 .link {
+  margin: 0;
+  max-width: fit-content;
+  height: 25px;
+  text-decoration: none;
+  font-family: "Open Sans";
+  font-style: semi-bold;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: #ffffff;
+}
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #4c1a97 0%, #6d6dff 100%);
+  border-radius: 0px;
 }
 
 /*--SKILS--*/

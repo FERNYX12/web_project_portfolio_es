@@ -6,20 +6,7 @@
     url("../fonts/ArchivoBlack-Regular.woff2") format("woff2"),
     url("../fonts/ArchivoBlack-Regular.woff") format("woff");
   font-weight: 800;
-}
-@font-face {
-  font-family: "Noto Serif";
-  src:
-    url("../fonts/NotoSerif-Regular.woff2") format("woff2"),
-    url("../fonts/NotoSerif-Regular.woff") format("woff");
-  font-weight: 800;
-}
-@font-face {
-  font-family: "Inter";
-  src:
-    url("../fonts/Inter-Regular.woff2") format("woff2"),
-    url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 800;
+  font-style: normal;
 }
 @font-face {
   font-family: "Open Sans";
@@ -27,30 +14,23 @@
     url("../fonts/OpenSans-Regular.woff2") format("woff2"),
     url("../fonts/OpenSans-Regular.woff") format("woff");
   font-weight: 800;
-}
-@font-face {
-  font-family: "Noto Serif";
-  src:
-    url("../fonts/NotoSerif-Italic.woff2") format("woff2"),
-    url("../fonts/NotoSerif-Italic.woff") format("woff");
-  font-weight: 800;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Inter";
-  src:
-    url("../fonts/Inter-Italic.woff2") format("woff2"),
-    url("../fonts/Inter-Italic.woff") format("woff");
-  font-weight: 800;
-  font-style: italic;
+  font-style: normal;
 }
 @font-face {
   font-family: "Open Sans";
   src:
-    url("../fonts/OpenSans-Italic.woff2") format("woff2"),
-    url("../fonts/OpenSans-Italic.woff") format("woff");
+    url("../fonts/OpenSans-Bold.woff2") format("woff2"),
+    url("../fonts/OpenSans-Bold.woff") format("woff");
   font-weight: 800;
-  font-style: italic;
+  font-style: bold;
+}
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("../fonts/OpenSans-SemiBold.woff2") format("woff2"),
+    url("../fonts/OpenSans-SemiBold.woff") format("woff");
+  font-weight: 800;
+  font-style: semibold;
 }
 
 /* ---MAIN--- */
@@ -58,6 +38,7 @@
   background-color: #111;
   color: #fff;
   display: flex;
+  padding-top: 40px;
   flex-direction: column;
   z-index: 0;
   align-items: center;
@@ -67,7 +48,6 @@
 .header {
   display: flex;
   column-gap: 20px;
-  z-index: 1;
 }
 
 .header-description {
@@ -119,6 +99,7 @@
   color: #ffffff;
   background: none;
 }
+
 .main-photo-frame {
   display: flex;
   flex-shrink: 0;
@@ -126,16 +107,36 @@
   margin-left: 20px;
   max-width: 387px;
   max-height: 500px;
-  overflow: visible;
-  background: radial-gradient(circle at bottom, #6d6dff 100%, #111 40%);
-
-  z-index: 3;
+  position: relative;
 }
+
 .main-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.main-photo-frame::after {
+  content: "";
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  left: 0;
+  bottom: 0;
+
+  transform: translate(-25%, 25%);
+
+  background: #6d6dff;
+  border-radius: 50%;
+
+  filter: blur(120px);
+
+  opacity: 0.3;
+
+  z-index: -1;
 }
 
 /*-menu-*/
@@ -208,10 +209,11 @@
 }
 .skils-icons {
   display: flex;
+
   box-sizing: border-box;
   align-content: space-around;
   column-gap: 180px;
-  padding-top: 50px;
+  margin-top: 50px;
   padding-bottom: 100px;
 }
 .skil-icon {
@@ -255,6 +257,29 @@
   height: 330px;
   position: absolute;
 }
+
+.project-preview::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 50%;
+
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(120, 120, 120, 0.25) 50%,
+    rgba(70, 70, 70, 0.55) 100%
+  );
+
+  pointer-events: none;
+
+  z-index: 1;
+}
 .project-card-img {
   width: 100%;
   height: 100%;
@@ -264,6 +289,7 @@
   position: absolute;
   bottom: 10px;
   left: 10px;
+  z-index: 2;
 }
 .skil-used {
   width: 40px;
@@ -276,7 +302,7 @@
   padding-left: 30px;
 
   width: 560px;
-  max-height: 340px;
+  max-height: auto;
   display: flex;
   flex-direction: column;
 
@@ -285,7 +311,8 @@
 .project-name {
   /* Página web de una cafetería */
 
-  padding-top: 30px;
+  margin-top: 30px;
+  margin-bottom: 20px;
   width: 339px;
   height: 33px;
 
@@ -301,13 +328,17 @@
 .project-description {
   max-width: 530px;
   height: 175px;
+  margin-top: auto;
 
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 25px;
   inline-size: none;
+
+  text-align: left;
+  justify-content: left;
 
   color: #ffffff;
 }
@@ -328,6 +359,7 @@
 
 /*--FOOTER--*/
 .footer {
+  position: relative;
   display: flex;
   text-align: center;
   max-width: 100%;
@@ -336,6 +368,7 @@
   align-self: center;
 }
 .contact {
+  margin-top: 0;
   display: flex;
   flex-direction: column;
   max-width: 100%;
@@ -348,6 +381,7 @@
 }
 .contact-title {
   display: flex;
+  margin: 0;
   max-width: 201px;
   max-height: 44px;
 
@@ -365,7 +399,7 @@
   /* student@tripleten.com */
 
   margin-top: 20px;
-  margin-bottom: 30px;
+
   width: 194px;
   height: 25px;
   display: flex;
@@ -395,4 +429,35 @@
 }
 .socialmedia-link {
   padding: 0;
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background: #6d6dff;
+  border-radius: 49%;
+
+  filter: blur(120px);
+
+  opacity: 0.3;
+
+  z-index: -1;
+}
+
+/* opacity */
+.hover-opacity {
+  transition: opacity 0.5s ease;
+}
+
+.hover-opacity:hover {
+  opacity: 0.5;
 }

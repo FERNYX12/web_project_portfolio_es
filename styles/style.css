@@ -28,13 +28,39 @@
     url("../fonts/OpenSans-Regular.woff") format("woff");
   font-weight: 800;
 }
+@font-face {
+  font-family: "Noto Serif";
+  src:
+    url("../fonts/NotoSerif-Italic.woff2") format("woff2"),
+    url("../fonts/NotoSerif-Italic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Inter";
+  src:
+    url("../fonts/Inter-Italic.woff2") format("woff2"),
+    url("../fonts/Inter-Italic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("../fonts/OpenSans-Italic.woff2") format("woff2"),
+    url("../fonts/OpenSans-Italic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic;
+}
 
 /* ---MAIN--- */
 .main {
   background-color: #111;
-  padding: 40px 120px;
   color: #fff;
+  display: flex;
+  flex-direction: column;
   z-index: 0;
+  align-items: center;
 }
 
 /*--HEADER--*/
@@ -91,6 +117,7 @@
   line-height: 25px;
 
   color: #ffffff;
+  background: none;
 }
 .main-photo-frame {
   display: flex;
@@ -140,7 +167,7 @@
   height: 25px;
   text-decoration: none;
   font-family: "Open Sans";
-  font-style: semi-bold;
+  font-style: SemiBold;
   font-weight: 600;
   font-size: 18px;
   line-height: 25px;
@@ -159,56 +186,213 @@
 
 /*--SKILS--*/
 .skils {
+  margin-top: 110px;
+  margin-bottom: 100px;
+  padding-bottom: 100px;
+  box-sizing: border-box;
 }
 .skils-title {
+  /* Habilidades y herramientas */
+
+  max-width: 603px;
+  max-height: 44px;
+
+  font-family: "Archivo Black";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 44px;
+  /* idéntico a la altura del cuadro */
+
+  color: #ffffff;
 }
 .skils-icons {
+  display: flex;
+  box-sizing: border-box;
+  align-content: space-around;
+  column-gap: 180px;
+  padding-top: 50px;
+  padding-bottom: 100px;
 }
 .skil-icon {
+  width: 50px;
+  height: 57px;
 }
 
 /*--PROJECTS--*/
 .projects {
+  display: flex;
 }
 /*-section 1-*/
 .project-title {
+  /* Proyectos destacados */
+
+  max-width: 487px;
+  max-height: 44px;
+
+  font-family: "Archivo Black";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 44px;
+  /* idéntico a la altura del cuadro */
+
+  color: #ffffff;
+
+  margin-bottom: 50px;
 }
+
 .project-cards {
+  display: flex;
+  column-gap: 20px;
+  max-height: 1200px;
 }
 .project-card {
+  max-height: fit-content;
 }
 .project-preview {
+  width: 590px;
+  height: 330px;
+  position: absolute;
+}
+.project-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.skil-used-content {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
 }
 .skil-used {
+  width: 40px;
+  height: 40px;
 }
+
 /*-section 2-*/
 .project-content {
+  margin-top: 330px;
+  padding-left: 30px;
+
+  width: 560px;
+  max-height: 340px;
+  display: flex;
+  flex-direction: column;
+
+  background: #1c1c1c;
 }
 .project-name {
+  /* Página web de una cafetería */
+
+  padding-top: 30px;
+  width: 339px;
+  height: 33px;
+
+  font-family: "Open Sans";
+  font-style: Bold;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  /* idéntico a la altura del cuadro */
+
+  color: #ffffff;
 }
 .project-description {
+  max-width: 530px;
+  height: 175px;
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  inline-size: none;
+
+  color: #ffffff;
 }
 .project-links {
+  column-gap: 20px;
+  display: flex;
+  padding: 0;
+  margin-top: auto;
+  list-style: none;
 }
 .project-link {
+  text-decoration: none;
 }
-.project-link-live {
+/* .project-link-live { 
 }
 .project-link-gith {
-}
+} */
 
 /*--FOOTER--*/
 .footer {
+  display: flex;
+  text-align: center;
+  max-width: 100%;
+  margin-top: 100px;
+  align-items: center;
+  align-self: center;
 }
 .contact {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  align-self: center;
+
+  /* Contacto */
 }
 .contact-title {
+  display: flex;
+  max-width: 201px;
+  max-height: 44px;
+
+  font-family: "Archivo Black";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 44px;
+
+  align-items: center;
+
+  color: #ffffff;
 }
 .email {
+  /* student@tripleten.com */
+
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 194px;
+  height: 25px;
+  display: flex;
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  /* idéntico a la altura del cuadro */
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: #6d6dff;
 }
-.socialmedia {
+
+.social-media {
+  display: flex;
+  column-gap: 80px;
+  margin-top: 30px;
+  padding: 0;
 }
 .socialmedia-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 .socialmedia-link {
+  padding: 0;
 }

@@ -53,6 +53,7 @@
 .header-description {
   display: flex;
   flex-direction: column;
+  max-width: 793px;
 }
 .main-name {
   /* Mariana Hernández */
@@ -87,8 +88,8 @@
 .description {
   /* Desarrolladora web junior con experiencia práctica creando interfaces limpias y responsivas con HTML, CSS, JavaScript y React, así como implementando lógica básica de back-end. Ha trabajado en proyectos formativos que siguen procesos reales de desarrollo, usando Git, GitHub y Figma. Disfruta colaborar en equipo, mantener un código claro y resolver problemas de forma estructurada. Motivada por seguir aprendiendo, asumir nuevos retos y aprovechar oportunidades para crecer como desarrolladora. */
   margin: 0;
-  width: 793px;
-  height: 150px;
+  width: auto;
+  height: 100%;
 
   font-family: "Open Sans";
   font-style: normal;
@@ -224,6 +225,7 @@
 /*--PROJECTS--*/
 .projects {
   display: flex;
+  flex-direction: column;
 }
 /*-section 1-*/
 .project-title {
@@ -470,8 +472,12 @@
     align-items: baseline;
     padding: 40px 40px 120px 40px;
   }
-
-  .header-description {
+  /* header */
+  .header {
+    max-height: fit-content;
+    column-gap: 20px;
+  }
+  .titles {
     max-width: 452px;
     max-height: 50px;
 
@@ -486,36 +492,83 @@
 
     color: rgba(255, 255, 255, 0.5);
   }
-
   .header-description {
-    max-width: 452px;
-    max-height: 276px;
+    max-width: fit-content;
+    max-height: fit-content;
 
     font-family: "Open Sans";
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
+    flex-grow: 0;
 
     color: #ffffff;
   }
-
-  .header-description span {
+  .header-description-text {
     display: block;
   }
   .text-ignore {
     display: none;
   }
   .main-name {
+    margin-top: 0;
     max-width: 434px;
     max-height: 127px;
+    height: fit-content;
+    padding-bottom: 14px;
   }
-
   .main-photo-frame {
     width: 216px;
     height: 280px;
   }
-}
+  /* SKIL */
+  .skils {
+    margin: 0;
+    margin-top: 80px;
+  }
+  .skils-icons {
+    column-gap: 78px;
+    grid-row: calc(100% - (78px / 6));
+    justify-content: space-around;
+  }
+
+  /* PROYECTOS */
+  .projects{
+  display:flex;
+  flex-direction: column;
+  }
+  .project-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    max-height: fit-content;
+    flex-grow: 1;
+    column-gap: 0;  
+  }
+  .project-card {
+    width: 100%;
+    box-sizing: border-box;
+    flex: 1 1 100%;
+    
+  }
+
+  .project-preview{
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .project-content{
+    display: flex;
+    flex-grow: 1;
+    max-height: fit-content;
+  }
+ 
+  .project-links{
+    margin-top: 30px;
+  }
+
 
 @media screen and (max-width: 767px) {
 }
